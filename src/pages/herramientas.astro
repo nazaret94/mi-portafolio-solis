@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<BaseLayout title="Herramientas y Proyectos" activePage="herramientas">
+  <h2 class="text-2xl font-bold mb-6">Herramientas</h2>
+  <ul class="list-disc pl-6 mb-10">
+    <li>HTML, CSS, JavaScript, React, Astro</li>
+    <li>Laravel, PHP, PostgreSQL</li>
+    <li>Git, GitHub, Figma</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mb-6">Proyectos</h2>
+  <div class="grid gap-6 md:grid-cols-2">
+    <ProjectCard title="Catálogo Web" description="Catálogo dinámico con Laravel y PostgreSQL" />
+    <ProjectCard title="Videojuego educativo" description="Juego desarrollado con Unity para reforzar lógica" />
+  </div>
+</BaseLayout>

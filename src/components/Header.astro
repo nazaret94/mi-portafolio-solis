@@ -1,0 +1,12 @@
+---
+const { activePage } = Astro.props;
+---
+
+<header class="flex justify-between items-center py-4 px-8 shadow-md bg-white">
+  <h1 class="text-xl font-bold">Solis Torres Mariana Nazaret</h1>
+  <nav class="flex gap-4">
+    <a href="/" class={activePage === "inicio" ? "text-blue-600 font-semibold" : ""}>Inicio</a>
+    <a href="/herramientas" class={activePage === "herramientas" ? "text-blue-600 font-semibold" : ""}>Herramientas</a>
+    <a href="/contacto" class={activePage === "contacto" ? "text-blue-600 font-semibold" : ""}>Contacto</a>
+  </nav>
+</header>
