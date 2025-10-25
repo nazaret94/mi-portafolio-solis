@@ -1,0 +1,37 @@
+---
+import FormacionCard from '../index/FormacionCard.astro';
+
+// Simulación de datos desde una base o API
+const formacionData = [
+  {
+    logo: '/logos/logo-ingenieria-unam.png',
+    alt: 'Ingeniería UNAM'
+  },
+  {
+    logo: '/logos/logo-diplomado-nutricion.png',
+    alt: 'Diplomado Nutrición Deportiva'
+  },
+  {
+    logo: '/logos/logo-fisiologia-unam.png',
+    alt: 'Instituto de Fisiología Celular UNAM'
+  },
+  {
+    logo: '/logos/logo-uvm.png',
+    alt: 'Universidad del Valle de México'
+  }
+];
+---
+
+<div>
+  <div class="degradado-morado mt-10 ml-25 mr-25 mb-8 text-center p-5 rounded-3xl ">
+    <h1 class="text-5xl font-bold tx-rosa-3 pacifico-regular">Formación</h1>
+  </div>
+  <div class="flex justify-center items-center">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-19 max-w-4xl ">
+    {formacionData.map(item => (
+      <FormacionCard logo={item.logo} alt={item.alt} />
+    ))}
+  </div>
+</div>
+
+

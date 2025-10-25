@@ -10,9 +10,9 @@ const { title, activePage } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title ? `${title} | Portafolio STMN` : "Portafolio STMN"}</title>
   </head>
-  <body class="bg-white text-gray-800">
+  <body class="bg-rosa-3">
     <Header activePage={activePage} />
-    <main class="min-h-screen px-6 py-8">
+    <main class="min-h-screen px-4">
       <slot />
     </main>
     <Footer />

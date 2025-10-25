@@ -2,11 +2,19 @@
 const { activePage } = Astro.props;
 ---
 
-<header class="flex justify-between items-center py-4 px-8 shadow-md bg-white">
-  <h1 class="text-xl font-bold">Solis Torres Mariana Nazaret</h1>
-  <nav class="flex gap-4">
-    <a href="/" class={activePage === "inicio" ? "text-blue-600 font-semibold" : ""}>Inicio</a>
-    <a href="/herramientas" class={activePage === "herramientas" ? "text-blue-600 font-semibold" : ""}>Herramientas</a>
-    <a href="/contacto" class={activePage === "contacto" ? "text-blue-600 font-semibold" : ""}>Contacto</a>
-  </nav>
+<header class="flex justify-between p-3 px-4 shadow-md bg-verde-agua-1 h-18  mt-4 ml-4 mr-4 rounded-tl-2xl rounded-tr-2xl">
+  <div class="flex items-center justify-center bg-rosa-1 rounded-xl w-2/3 h-15 tx-rosa-3 text-xl poiret-one ">
+    <nav class="flex gap-15">
+      <a href="/" class={activePage === "inicio" ? "text-pink-600 font-semibold" : ""}>Inicio</a>
+      <a href="/herramientas" class={activePage === "herramientas" ? "text-pink-600 font-semibold" : ""}>Herramientas y proyectos</a>
+      <a href="/contacto" class={activePage === "contacto" ? "text-pink-600 font-semibold" : ""}>Contacto</a>
+    </nav>
+  </div>
+  
 </header>
+ 
+
+  
+
+  
+

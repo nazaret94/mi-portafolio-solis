@@ -1,11 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Section from "../components/Section.astro";
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Informacion from "../components/index/Informacion.astro"
+import Formacion from "../components/index/Formacion.astro" 
+import Experiencia from "../components/index/Experiencia.astro"
+import "../styles/global.css"
 ---
 
 <BaseLayout title="Inicio" activePage="inicio">
-  <Section title="Sobre mí">
-    <p>Hola, soy Mariana, Ingeniera en Computación titulada con especialización en Ingeniería de Software.</p>
-    <p>Actualmente busco ampliar mis conocimientos y adquirir más experiencia laboral desarrollando proyectos web.</p>
-  </Section>
+  <Informacion />
+  <Formacion />
+  <Experiencia/>
 </BaseLayout>

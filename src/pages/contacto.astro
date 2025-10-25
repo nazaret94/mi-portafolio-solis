@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ContactForm from "../components/ContactForm.astro";
+import ContactForm from "../components/contacto/ContactForm.astro";
+import ContactTitulo from "../components/contacto/ContactTitulo.astro"
+import "../styles/global.css"
 ---
 
 <BaseLayout title="Contacto" activePage="contacto">
-  <h2 class="text-2xl font-bold mb-4">Contáctame</h2>
+  <ContactTitulo/>
   <ContactForm />
 </BaseLayout>

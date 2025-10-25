@@ -1,1 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import "tailwindcss";
+
+.delius-swash {
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poiret-one {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alumni-sans {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.markazi-text{
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*verde*/
+.bg-verde-agua-1{
+    background-color: #21726d;
+}
+.tx-verde-agua-1{
+    color: #21726d;
+}
+
+.bg-verde-agua-2{
+    background-color: #64b5ae;
+}
+.tx-verde-agua-2{
+    color: #64b5ae;
+}
+
+.bg-verde-agua-3{
+    background-color: #82c6c5;
+}
+.tx-verde-agua-3{
+    color: #82c6c5;
+}
+
+/*rosa*/
+
+.bg-rosa-1{
+    background-color: #f3a2be;
+}
+.tx-rosa-1{
+    color: #f3a2be;
+}
+
+.bg-rosa-2{
+    background-color: #ffd3dd;
+}
+.tx-rosa-2{
+    color: #ffd3dd;
+}
+
+.bg-rosa-3{
+    background-color: #fff4f6;
+}
+.tx-rosa-3{
+    color: #fff4f6;
+}
+
+.bg-morado-1{
+    background-color: #a4a5c4;
+}
+.tx-morado-1{
+    color: #a4a5c4;
+}
+
+.bg-morado-2{
+    background-color: #7887b0;
+}
+.tx-morado-2{
+    color: #7887b0;
+}
+
+.bg-negro{
+    background-color: #404040;
+}
+.tx-negro{
+    color: #404040;
+}
+
+.degradado-verde {
+  @apply bg-gradient-to-t from-[#82c6c5] from-70%  to-[#21726d] to-100%;
+}
+
+.degradado-verde-2 {
+  @apply bg-gradient-to-t from-[#82c6c5]  to-[#21726d];
+}
+
+.degradado-rosa {
+  @apply bg-gradient-to-t from-[#ffd3dd]  to-[#7887b0];
+}
+.degradado-morado {
+  @apply bg-linear-to-r from-[#7887b0]  to-[#82c6c5];
+}
