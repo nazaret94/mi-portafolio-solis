@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "../herramientas/ProjectCard.astro";
+const { proyectosData } = Astro.props;
 ---
 
 <div class="px-4 sm:px-6 md:px-10 lg:px-20">
@@ -10,13 +11,13 @@ import ProjectCard from "../herramientas/ProjectCard.astro";
 
   <!-- Grid de tarjetas -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-    <ProjectCard title="Catálogo Web" description="Catálogo dinámico con Laravel y PostgreSQL" />
-    <ProjectCard title="Videojuego educativo" description="Juego desarrollado con Unity para reforzar lógica" />
-    <ProjectCard title="Catálogo Web" description="Catálogo dinámico con Laravel y PostgreSQL" />
-    <ProjectCard title="Videojuego educativo" description="Juego desarrollado con Unity para reforzar lógica" />
-    <ProjectCard title="Catálogo Web" description="Catálogo dinámico con Laravel y PostgreSQL" />
-    <ProjectCard title="Videojuego educativo" description="Juego desarrollado con Unity para reforzar lógica" />
-    <ProjectCard title="Catálogo Web" description="Catálogo dinámico con Laravel y PostgreSQL" />
-    <ProjectCard title="Videojuego educativo" description="Juego desarrollado con Unity para reforzar lógica" />
+    {proyectosData.map(item => (
+      <ProjectCard 
+        nombre={item.nombre} 
+        descripcion={item.descripcion} 
+        imagen={item.imagen} 
+        link_repo={item.link_repo} 
+      />
+    ))}
   </div>
 </div>

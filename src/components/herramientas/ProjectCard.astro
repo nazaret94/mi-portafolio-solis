@@ -1,13 +1,20 @@
 ---
-const { title, description } = Astro.props;
+const { nombre, descripcion, 	imagen, link_repo } = Astro.props;
 ---
 
 <div class="bg-rosa-2 rounded-3xl p-6 shadow-[0_4px_12px_#f8b4d9] hover:shadow-[0_6px_16px_#f8b4d9] transition transform hover:scale-105 aspect-[5/4] max-w-lg w-full mx-auto flex flex-col justify-between">
+  <!-- Imagen del proyecto -->
+  {imagen && (
+    <img src={imagen} alt={nombre} class="rounded-xl mb-4 object-cover w-full h-48 sm:h-56" />
+  )}
+
   <div>
-    <h3 class="text-3xl sm:text-4xl font-bold pacifico-regular tx-verde-agua-1 mb-4 text-center">{title}</h3>
-    <p class="text-base sm:text-lg text-gray-700 markazi-text mb-6 text-center">{description}</p>
+    <h3 class="text-3xl sm:text-4xl font-bold pacifico-regular tx-verde-agua-1 mb-4 text-center">{nombre}</h3>
+    <p class="text-base sm:text-lg text-gray-700 markazi-text mb-6 text-center">{descripcion}</p>
   </div>
-  <a href={`/proyectos/${title.toLowerCase().replace(/\s+/g, "-")}`} class="bg-verde-agua-1 text-white font-semibold py-2 px-4 rounded-full text-center hover:bg-verde-agua-2 transition w-fit mx-auto">
+
+  <a href={descripcion} 
+     class="bg-verde-agua-1 text-white font-semibold py-2 px-4 rounded-full text-center hover:bg-verde-agua-2 transition w-fit mx-auto">
     Ver proyecto
   </a>
 </div>

@@ -1,3 +1,6 @@
+---
+const { habilidadesData  } = Astro.props;
+---
 <!-- Encabezado Herramientas -->
 <div class="w-full mb-10">
   <div class="w-full sm:w-3/4">
@@ -10,34 +13,9 @@
 <!-- Grid de logos -->
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-6xl mx-auto px-4 pb-10">
   <!-- Cada tarjeta de logo -->
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/unity.png" alt="Unity" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/csharp.png" alt="C#" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/github.png" alt="GitHub" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/html5.png" alt="HTML5" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/javascript.png" alt="JavaScript" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/spring.png" alt="Spring" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/java.png" alt="Java" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/bootstrap.png" alt="Bootstrap" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/sql.png" alt="SQL" class="max-h-full max-w-full object-contain" />
-  </div>
-  <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
-    <img src="/logos/sql.png" alt="SQL" class="max-h-full max-w-full object-contain" />
-  </div>
+  {habilidadesData.map(item => (
+    <div class="bg-gray-100 rounded-xl flex items-center justify-center aspect-square shadow-md">
+      <img src={item.logo} alt={item.nombre} class="max-h-full max-w-full object-contain" />
+    </div>
+  ))}
 </div>
