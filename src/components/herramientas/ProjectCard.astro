@@ -2,8 +2,12 @@
 const { title, description } = Astro.props;
 ---
 
-<div class="border rounded-xl p-4 shadow hover:shadow-lg transition">
-  <h3 class="text-xl font-semibold mb-2">{title}</h3>
-  <p class="text-gray-600 mb-3">{description}</p>
-  <a href={`/proyectos/${title.toLowerCase().replace(/\s+/g, "-")}`} class="text-blue-600 hover:underline">Ver</a>
+<div class="bg-rosa-2 rounded-3xl p-6 shadow-[0_4px_12px_#f8b4d9] hover:shadow-[0_6px_16px_#f8b4d9] transition transform hover:scale-105 aspect-[5/4] max-w-lg w-full mx-auto flex flex-col justify-between">
+  <div>
+    <h3 class="text-3xl sm:text-4xl font-bold pacifico-regular tx-verde-agua-1 mb-4 text-center">{title}</h3>
+    <p class="text-base sm:text-lg text-gray-700 markazi-text mb-6 text-center">{description}</p>
+  </div>
+  <a href={`/proyectos/${title.toLowerCase().replace(/\s+/g, "-")}`} class="bg-verde-agua-1 text-white font-semibold py-2 px-4 rounded-full text-center hover:bg-verde-agua-2 transition w-fit mx-auto">
+    Ver proyecto
+  </a>
 </div>

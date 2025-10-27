@@ -1,35 +1,20 @@
 ---
 import FormacionCard from '../index/FormacionCard.astro';
 
-// Simulación de datos desde una base o API
-const formacionData = [
-  {
-    logo: '/logos/logo-ingenieria-unam.png',
-    alt: 'Ingeniería UNAM'
-  },
-  {
-    logo: '/logos/logo-diplomado-nutricion.png',
-    alt: 'Diplomado Nutrición Deportiva'
-  },
-  {
-    logo: '/logos/logo-fisiologia-unam.png',
-    alt: 'Instituto de Fisiología Celular UNAM'
-  },
-  {
-    logo: '/logos/logo-uvm.png',
-    alt: 'Universidad del Valle de México'
-  }
-];
+const {  experienciaData  } = Astro.props;
+console.log(experienciaData);
 ---
 
-<div>
-  <div class="degradado-morado mt-10 ml-25 mr-25 mb-8 text-center p-5 rounded-3xl ">
-    <h1 class="text-5xl font-bold tx-rosa-3 pacifico-regular">Experiencia</h1>
+<div class="px-4 sm:px-6 md:px-10 lg:px-20">
+  <!-- Encabezado -->
+  <div class="degradado-morado mt-10 mb-8 text-center p-5 rounded-3xl">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tx-rosa-3 pacifico-regular">Experiencia</h1>
   </div>
-  <div class="flex justify-center items-center">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-19 max-w-4xl ">
-    {formacionData.map(item => (
-      <FormacionCard logo={item.logo} alt={item.alt} />
+
+  <!-- Grid de formación -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+    {experienciaData.map(item => (
+      <FormacionCard logo={item.logo} alt={item.empresa} />
     ))}
   </div>
 </div>

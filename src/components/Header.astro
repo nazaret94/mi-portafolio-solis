@@ -2,19 +2,12 @@
 const { activePage } = Astro.props;
 ---
 
-<header class="flex justify-between p-3 px-4 shadow-md bg-verde-agua-1 h-18  mt-4 ml-4 mr-4 rounded-tl-2xl rounded-tr-2xl">
-  <div class="flex items-center justify-center bg-rosa-1 rounded-xl w-2/3 h-15 tx-rosa-3 text-xl poiret-one ">
-    <nav class="flex gap-15">
+<header class="flex justify-between items-center p-3 px-4 shadow-md bg-verde-agua-1 mt-4 mx-4 rounded-tl-2xl rounded-tr-2xl">
+  <div class="flex items-center justify-center bg-rosa-1 rounded-xl w-full lg:w-2/3 py-3 tx-rosa-3 text-sm sm:text-base md:text-lg poiret-one">
+    <nav class="flex flex-col sm:flex-row gap-4 sm:gap-10 text-center">
       <a href="/" class={activePage === "inicio" ? "text-pink-600 font-semibold" : ""}>Inicio</a>
       <a href="/herramientas" class={activePage === "herramientas" ? "text-pink-600 font-semibold" : ""}>Herramientas y proyectos</a>
       <a href="/contacto" class={activePage === "contacto" ? "text-pink-600 font-semibold" : ""}>Contacto</a>
     </nav>
   </div>
-  
 </header>
- 
-
-  
-
-  
-

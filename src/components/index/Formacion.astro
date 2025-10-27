@@ -2,24 +2,8 @@
 import FormacionCard from '../index/FormacionCard.astro';
 
 // Simulación de datos desde una base o API
-const formacionData = [
-  {
-    logo: '/logos/logo-ingenieria-unam.png',
-    alt: 'Ingeniería UNAM'
-  },
-  {
-    logo: '/logos/logo-diplomado-nutricion.png',
-    alt: 'Diplomado Nutrición Deportiva'
-  },
-  {
-    logo: '/logos/logo-fisiologia-unam.png',
-    alt: 'Instituto de Fisiología Celular UNAM'
-  },
-  {
-    logo: '/logos/logo-uvm.png',
-    alt: 'Universidad del Valle de México'
-  }
-];
+//const formacionData = [
+const{educacionData} = Astro.props;
 ---
 
 <div>
@@ -28,8 +12,8 @@ const formacionData = [
   </div>
   <div class="flex justify-center items-center">
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-19 max-w-4xl ">
-    {formacionData.map(item => (
-      <FormacionCard logo={item.logo} alt={item.alt} />
+    {educacionData.map(item => (
+      <FormacionCard logo={item.logo} alt={item.nombre} />
     ))}
   </div>
 </div>
